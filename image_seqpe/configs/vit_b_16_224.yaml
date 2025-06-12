@@ -1,0 +1,5 @@
+MODEL:
+  TYPE: vit_b_16
+  NAME: vit_base_16_224
+  EMBED_DIM: 768
+  NUM_HEADS: 12

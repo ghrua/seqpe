@@ -1,0 +1,292 @@
+[2025-06-10 15:53:49 eval_vit_small_16_224] (eval.py 134): INFO Creating model:vit_s_16/vit_small_16_224
+[2025-06-10 15:53:50 eval_vit_small_16_224] (eval.py 141): INFO VisionTransformer(
+  (patch_embed): PatchEmbed(
+    (proj): Conv2d(3, 384, kernel_size=(16, 16), stride=(16, 16))
+    (norm): Identity()
+  )
+  (pos_drop): Dropout(p=0.0, inplace=False)
+  (blocks): ModuleList(
+    (0-11): 12 x Block(
+      (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (pe_qk): Linear(in_features=384, out_features=768, bias=True)
+        (qkv): Linear(in_features=384, out_features=1152, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=384, out_features=384, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): Identity()
+      (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=384, out_features=1536, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=1536, out_features=384, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+  )
+  (norm): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+  (pre_logits): Identity()
+  (head): Linear(in_features=384, out_features=1000, bias=True)
+)
+[2025-06-10 15:53:50 eval_vit_small_16_224] (eval.py 145): INFO SequentialPE(
+  (pos_of_seqpe_embed): Embedding(4, 384)
+  (token_of_seqpe_embed): Embedding(10, 384)
+  (transformers): ModuleList(
+    (0-1): 2 x SequentialPeBlock(
+      (attn): SequentialPeAttention(
+        (c_attn): Conv1D()
+        (c_proj): Conv1D()
+        (attn_dropout): Dropout(p=0.0, inplace=False)
+        (resid_dropout): Dropout(p=0.1, inplace=False)
+      )
+      (layernorm_1): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+      (layernorm_2): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+      (mlp): SequentialPeMLP(
+        (c_fc): Conv1D()
+        (c_proj): Conv1D()
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+  )
+  (layernorm): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+  (out_proj): Linear(in_features=384, out_features=384, bias=True)
+)
+[2025-06-10 15:53:50 eval_vit_small_16_224] (eval.py 151): INFO Successfully init DDP for model
+[2025-06-10 15:53:50 eval_vit_small_16_224] (eval.py 158): INFO Successfully init DDP for pe model
+[2025-06-10 15:53:50 eval_vit_small_16_224] (eval.py 166): INFO number of params: 25523560
+[2025-06-10 15:53:50 eval_vit_small_16_224] (utils.py 76): INFO ==============> Resuming form image_seqpe_ckpt/best_model.pth....................
+[2025-06-10 15:53:51 eval_vit_small_16_224] (utils.py 88): INFO <All keys matched successfully>
+[2025-06-10 15:53:51 eval_vit_small_16_224] (utils.py 91): INFO <All keys matched successfully>
+[2025-06-10 16:56:58 eval_vit_small_16_224] (eval.py 134): INFO Creating model:vit_s_16/vit_small_16_224
+[2025-06-10 16:56:58 eval_vit_small_16_224] (eval.py 141): INFO VisionTransformer(
+  (patch_embed): PatchEmbed(
+    (proj): Conv2d(3, 384, kernel_size=(16, 16), stride=(16, 16))
+    (norm): Identity()
+  )
+  (pos_drop): Dropout(p=0.0, inplace=False)
+  (blocks): ModuleList(
+    (0-11): 12 x Block(
+      (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (pe_qk): Linear(in_features=384, out_features=768, bias=True)
+        (qkv): Linear(in_features=384, out_features=1152, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=384, out_features=384, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): Identity()
+      (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=384, out_features=1536, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=1536, out_features=384, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+  )
+  (norm): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+  (pre_logits): Identity()
+  (head): Linear(in_features=384, out_features=1000, bias=True)
+)
+[2025-06-10 16:56:58 eval_vit_small_16_224] (eval.py 145): INFO SequentialPE(
+  (pos_of_seqpe_embed): Embedding(4, 384)
+  (token_of_seqpe_embed): Embedding(10, 384)
+  (transformers): ModuleList(
+    (0-1): 2 x SequentialPeBlock(
+      (attn): SequentialPeAttention(
+        (c_attn): Conv1D()
+        (c_proj): Conv1D()
+        (attn_dropout): Dropout(p=0.0, inplace=False)
+        (resid_dropout): Dropout(p=0.1, inplace=False)
+      )
+      (layernorm_1): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+      (layernorm_2): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+      (mlp): SequentialPeMLP(
+        (c_fc): Conv1D()
+        (c_proj): Conv1D()
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+  )
+  (layernorm): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+  (out_proj): Linear(in_features=384, out_features=384, bias=True)
+)
+[2025-06-10 16:56:58 eval_vit_small_16_224] (eval.py 151): INFO Successfully init DDP for model
+[2025-06-10 16:56:58 eval_vit_small_16_224] (eval.py 158): INFO Successfully init DDP for pe model
+[2025-06-10 16:56:58 eval_vit_small_16_224] (eval.py 166): INFO number of params: 25523560
+[2025-06-10 16:56:58 eval_vit_small_16_224] (utils.py 76): INFO ==============> Resuming form image_seqpe_ckpt/best_model.pth....................
+[2025-06-10 16:57:00 eval_vit_small_16_224] (utils.py 88): INFO <All keys matched successfully>
+[2025-06-10 16:57:00 eval_vit_small_16_224] (utils.py 91): INFO <All keys matched successfully>
+[2025-06-10 16:57:16 eval_vit_small_16_224] (eval.py 309): INFO Test: [0/391]	Time 10.214 (10.214)	Loss 0.5551 (0.5551)	Acc@1 92.969 (92.969)	Acc@5 98.438 (98.438)	Mem 550MB
+[2025-06-10 16:57:19 eval_vit_small_16_224] (eval.py 309): INFO Test: [10/391]	Time 0.045 (1.188)	Loss 1.3646 (0.6980)	Acc@1 70.312 (87.855)	Acc@5 91.406 (96.449)	Mem 550MB
+[2025-06-10 16:57:28 eval_vit_small_16_224] (eval.py 309): INFO Test: [20/391]	Time 0.045 (1.058)	Loss 0.8411 (0.9264)	Acc@1 85.938 (81.920)	Acc@5 94.531 (94.717)	Mem 550MB
+[2025-06-10 16:57:35 eval_vit_small_16_224] (eval.py 309): INFO Test: [30/391]	Time 2.210 (0.951)	Loss 1.1719 (1.0561)	Acc@1 78.906 (78.402)	Acc@5 92.188 (93.800)	Mem 550MB
+[2025-06-10 16:57:43 eval_vit_small_16_224] (eval.py 309): INFO Test: [40/391]	Time 0.045 (0.892)	Loss 1.0139 (0.9619)	Acc@1 82.031 (80.983)	Acc@5 90.625 (94.531)	Mem 550MB
+[2025-06-10 16:57:51 eval_vit_small_16_224] (eval.py 309): INFO Test: [50/391]	Time 0.510 (0.891)	Loss 0.5082 (0.9824)	Acc@1 90.625 (80.714)	Acc@5 97.656 (94.317)	Mem 550MB
+[2025-06-10 16:58:01 eval_vit_small_16_224] (eval.py 309): INFO Test: [60/391]	Time 3.140 (0.896)	Loss 1.0719 (0.9354)	Acc@1 78.125 (81.801)	Acc@5 94.531 (94.685)	Mem 550MB
+[2025-06-10 16:58:08 eval_vit_small_16_224] (eval.py 309): INFO Test: [70/391]	Time 0.045 (0.873)	Loss 1.2437 (0.9639)	Acc@1 71.094 (80.711)	Acc@5 90.625 (94.564)	Mem 550MB
+[2025-06-10 16:58:17 eval_vit_small_16_224] (eval.py 309): INFO Test: [80/391]	Time 2.568 (0.874)	Loss 1.2297 (0.9742)	Acc@1 74.219 (80.247)	Acc@5 91.406 (94.618)	Mem 550MB
+[2025-06-10 16:58:23 eval_vit_small_16_224] (eval.py 309): INFO Test: [90/391]	Time 2.335 (0.845)	Loss 1.1689 (0.9704)	Acc@1 70.312 (80.366)	Acc@5 93.750 (94.694)	Mem 550MB
+[2025-06-10 16:58:29 eval_vit_small_16_224] (eval.py 309): INFO Test: [100/391]	Time 0.045 (0.824)	Loss 0.7999 (0.9655)	Acc@1 85.938 (80.291)	Acc@5 96.094 (94.841)	Mem 550MB
+[2025-06-10 16:58:38 eval_vit_small_16_224] (eval.py 309): INFO Test: [110/391]	Time 1.630 (0.826)	Loss 1.2253 (0.9673)	Acc@1 61.719 (79.969)	Acc@5 96.875 (94.954)	Mem 550MB
+[2025-06-10 16:58:45 eval_vit_small_16_224] (eval.py 309): INFO Test: [120/391]	Time 2.370 (0.816)	Loss 1.0292 (0.9641)	Acc@1 78.125 (80.243)	Acc@5 94.531 (95.022)	Mem 550MB
+[2025-06-10 16:58:51 eval_vit_small_16_224] (eval.py 309): INFO Test: [130/391]	Time 0.045 (0.800)	Loss 0.6618 (0.9571)	Acc@1 89.844 (80.499)	Acc@5 95.312 (95.008)	Mem 550MB
+[2025-06-10 16:59:00 eval_vit_small_16_224] (eval.py 309): INFO Test: [140/391]	Time 0.196 (0.808)	Loss 1.2736 (0.9541)	Acc@1 69.531 (80.491)	Acc@5 95.312 (95.047)	Mem 550MB
+[2025-06-10 16:59:08 eval_vit_small_16_224] (eval.py 309): INFO Test: [150/391]	Time 3.481 (0.806)	Loss 0.8943 (0.9535)	Acc@1 79.688 (80.583)	Acc@5 96.875 (95.023)	Mem 550MB
+[2025-06-10 16:59:13 eval_vit_small_16_224] (eval.py 309): INFO Test: [160/391]	Time 0.045 (0.791)	Loss 1.2029 (0.9585)	Acc@1 73.438 (80.478)	Acc@5 91.406 (94.915)	Mem 550MB
+[2025-06-10 16:59:20 eval_vit_small_16_224] (eval.py 309): INFO Test: [170/391]	Time 0.972 (0.783)	Loss 1.7679 (0.9853)	Acc@1 60.156 (79.811)	Acc@5 86.719 (94.650)	Mem 550MB
+[2025-06-10 16:59:27 eval_vit_small_16_224] (eval.py 309): INFO Test: [180/391]	Time 0.045 (0.777)	Loss 1.7680 (1.0054)	Acc@1 64.062 (79.398)	Acc@5 87.500 (94.419)	Mem 550MB
+[2025-06-10 16:59:35 eval_vit_small_16_224] (eval.py 309): INFO Test: [190/391]	Time 0.045 (0.779)	Loss 1.7230 (1.0287)	Acc@1 60.156 (78.849)	Acc@5 87.500 (94.151)	Mem 550MB
+[2025-06-10 16:59:41 eval_vit_small_16_224] (eval.py 309): INFO Test: [200/391]	Time 1.505 (0.771)	Loss 1.1143 (1.0536)	Acc@1 75.781 (78.343)	Acc@5 92.969 (93.801)	Mem 550MB
+[2025-06-10 16:59:47 eval_vit_small_16_224] (eval.py 309): INFO Test: [210/391]	Time 0.045 (0.765)	Loss 1.3912 (1.0671)	Acc@1 71.094 (78.055)	Acc@5 91.406 (93.672)	Mem 550MB
+[2025-06-10 17:00:17 eval_vit_small_16_224] (eval.py 134): INFO Creating model:vit_s_16/vit_small_16_224
+[2025-06-10 17:00:17 eval_vit_small_16_224] (eval.py 141): INFO VisionTransformer(
+  (patch_embed): PatchEmbed(
+    (proj): Conv2d(3, 384, kernel_size=(16, 16), stride=(16, 16))
+    (norm): Identity()
+  )
+  (pos_drop): Dropout(p=0.0, inplace=False)
+  (blocks): ModuleList(
+    (0-11): 12 x Block(
+      (norm1): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (pe_qk): Linear(in_features=384, out_features=768, bias=True)
+        (qkv): Linear(in_features=384, out_features=1152, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=384, out_features=384, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): Identity()
+      (norm2): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=384, out_features=1536, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=1536, out_features=384, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+  )
+  (norm): LayerNorm((384,), eps=1e-06, elementwise_affine=True)
+  (pre_logits): Identity()
+  (head): Linear(in_features=384, out_features=1000, bias=True)
+)
+[2025-06-10 17:00:17 eval_vit_small_16_224] (eval.py 145): INFO SequentialPE(
+  (pos_of_seqpe_embed): Embedding(4, 384)
+  (token_of_seqpe_embed): Embedding(10, 384)
+  (transformers): ModuleList(
+    (0-1): 2 x SequentialPeBlock(
+      (attn): SequentialPeAttention(
+        (c_attn): Conv1D()
+        (c_proj): Conv1D()
+        (attn_dropout): Dropout(p=0.0, inplace=False)
+        (resid_dropout): Dropout(p=0.1, inplace=False)
+      )
+      (layernorm_1): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+      (layernorm_2): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+      (mlp): SequentialPeMLP(
+        (c_fc): Conv1D()
+        (c_proj): Conv1D()
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+  )
+  (layernorm): LayerNorm((384,), eps=1e-05, elementwise_affine=True)
+  (out_proj): Linear(in_features=384, out_features=384, bias=True)
+)
+[2025-06-10 17:00:17 eval_vit_small_16_224] (eval.py 151): INFO Successfully init DDP for model
+[2025-06-10 17:00:17 eval_vit_small_16_224] (eval.py 158): INFO Successfully init DDP for pe model
+[2025-06-10 17:00:17 eval_vit_small_16_224] (eval.py 166): INFO number of params: 25523560
+[2025-06-10 17:00:17 eval_vit_small_16_224] (utils.py 76): INFO ==============> Resuming form image_seqpe_ckpt/best_model.pth....................
+[2025-06-10 17:00:17 eval_vit_small_16_224] (utils.py 88): INFO <All keys matched successfully>
+[2025-06-10 17:00:17 eval_vit_small_16_224] (utils.py 91): INFO <All keys matched successfully>
+[2025-06-10 17:00:20 eval_vit_small_16_224] (eval.py 309): INFO Test: [0/391]	Time 2.176 (2.176)	Loss 0.3880 (0.3880)	Acc@1 93.750 (93.750)	Acc@5 99.219 (99.219)	Mem 1050MB
+[2025-06-10 17:00:21 eval_vit_small_16_224] (eval.py 309): INFO Test: [10/391]	Time 0.116 (0.309)	Loss 1.1747 (0.4856)	Acc@1 75.781 (90.696)	Acc@5 95.312 (98.153)	Mem 1051MB
+[2025-06-10 17:00:22 eval_vit_small_16_224] (eval.py 309): INFO Test: [20/391]	Time 0.115 (0.219)	Loss 0.5452 (0.6277)	Acc@1 89.844 (86.458)	Acc@5 97.656 (97.470)	Mem 1051MB
+[2025-06-10 17:00:24 eval_vit_small_16_224] (eval.py 309): INFO Test: [30/391]	Time 0.114 (0.206)	Loss 1.1272 (0.7349)	Acc@1 75.781 (83.644)	Acc@5 92.188 (96.774)	Mem 1051MB
+[2025-06-10 17:00:26 eval_vit_small_16_224] (eval.py 309): INFO Test: [40/391]	Time 0.208 (0.190)	Loss 0.5949 (0.6592)	Acc@1 89.062 (85.918)	Acc@5 96.094 (97.199)	Mem 1051MB
+[2025-06-10 17:00:27 eval_vit_small_16_224] (eval.py 309): INFO Test: [50/391]	Time 0.114 (0.190)	Loss 0.2995 (0.6610)	Acc@1 96.094 (86.336)	Acc@5 98.438 (97.028)	Mem 1051MB
+[2025-06-10 17:00:29 eval_vit_small_16_224] (eval.py 309): INFO Test: [60/391]	Time 0.115 (0.189)	Loss 0.7923 (0.6249)	Acc@1 82.812 (87.269)	Acc@5 96.094 (97.234)	Mem 1051MB
+[2025-06-10 17:00:31 eval_vit_small_16_224] (eval.py 309): INFO Test: [70/391]	Time 0.114 (0.181)	Loss 0.7878 (0.6515)	Acc@1 79.688 (86.477)	Acc@5 99.219 (97.073)	Mem 1051MB
+[2025-06-10 17:00:32 eval_vit_small_16_224] (eval.py 309): INFO Test: [80/391]	Time 0.114 (0.179)	Loss 0.7407 (0.6657)	Acc@1 85.156 (86.015)	Acc@5 95.312 (97.010)	Mem 1051MB
+[2025-06-10 17:00:34 eval_vit_small_16_224] (eval.py 309): INFO Test: [90/391]	Time 0.114 (0.178)	Loss 0.8333 (0.6650)	Acc@1 77.344 (85.989)	Acc@5 96.094 (97.038)	Mem 1051MB
+[2025-06-10 17:00:35 eval_vit_small_16_224] (eval.py 309): INFO Test: [100/391]	Time 0.114 (0.174)	Loss 0.5495 (0.6673)	Acc@1 89.844 (85.690)	Acc@5 96.094 (97.084)	Mem 1051MB
+[2025-06-10 17:00:37 eval_vit_small_16_224] (eval.py 309): INFO Test: [110/391]	Time 0.187 (0.175)	Loss 1.0422 (0.6772)	Acc@1 62.500 (85.234)	Acc@5 98.438 (97.107)	Mem 1051MB
+[2025-06-10 17:00:39 eval_vit_small_16_224] (eval.py 309): INFO Test: [120/391]	Time 0.114 (0.174)	Loss 0.5670 (0.6755)	Acc@1 89.844 (85.434)	Acc@5 97.656 (97.146)	Mem 1051MB
+[2025-06-10 17:00:41 eval_vit_small_16_224] (eval.py 309): INFO Test: [130/391]	Time 0.114 (0.178)	Loss 0.3013 (0.6697)	Acc@1 96.875 (85.687)	Acc@5 99.219 (97.120)	Mem 1051MB
+[2025-06-10 17:00:43 eval_vit_small_16_224] (eval.py 309): INFO Test: [140/391]	Time 0.376 (0.176)	Loss 1.0452 (0.6693)	Acc@1 71.094 (85.522)	Acc@5 97.656 (97.213)	Mem 1051MB
+[2025-06-10 17:00:44 eval_vit_small_16_224] (eval.py 309): INFO Test: [150/391]	Time 0.114 (0.174)	Loss 0.7781 (0.6747)	Acc@1 78.125 (85.462)	Acc@5 95.312 (97.160)	Mem 1051MB
+[2025-06-10 17:00:46 eval_vit_small_16_224] (eval.py 309): INFO Test: [160/391]	Time 0.114 (0.174)	Loss 0.8587 (0.6778)	Acc@1 81.250 (85.433)	Acc@5 95.312 (97.098)	Mem 1051MB
+[2025-06-10 17:00:48 eval_vit_small_16_224] (eval.py 309): INFO Test: [170/391]	Time 0.258 (0.175)	Loss 1.4805 (0.6988)	Acc@1 66.406 (84.887)	Acc@5 90.625 (96.907)	Mem 1051MB
+[2025-06-10 17:00:49 eval_vit_small_16_224] (eval.py 309): INFO Test: [180/391]	Time 0.114 (0.174)	Loss 1.5097 (0.7146)	Acc@1 65.625 (84.500)	Acc@5 90.625 (96.750)	Mem 1051MB
+[2025-06-10 17:00:51 eval_vit_small_16_224] (eval.py 309): INFO Test: [190/391]	Time 0.114 (0.175)	Loss 1.3954 (0.7377)	Acc@1 67.188 (83.991)	Acc@5 92.188 (96.544)	Mem 1051MB
+[2025-06-10 17:00:53 eval_vit_small_16_224] (eval.py 309): INFO Test: [200/391]	Time 0.152 (0.173)	Loss 0.7166 (0.7564)	Acc@1 82.031 (83.598)	Acc@5 95.312 (96.308)	Mem 1051MB
+[2025-06-10 17:00:54 eval_vit_small_16_224] (eval.py 309): INFO Test: [210/391]	Time 0.114 (0.172)	Loss 1.0047 (0.7683)	Acc@1 80.469 (83.298)	Acc@5 93.750 (96.183)	Mem 1051MB
+[2025-06-10 17:00:58 eval_vit_small_16_224] (eval.py 309): INFO Test: [220/391]	Time 0.115 (0.182)	Loss 0.4808 (0.7713)	Acc@1 91.406 (83.290)	Acc@5 99.219 (96.154)	Mem 1051MB
+[2025-06-10 17:01:06 eval_vit_small_16_224] (eval.py 309): INFO Test: [230/391]	Time 2.508 (0.208)	Loss 1.2315 (0.7774)	Acc@1 73.438 (83.215)	Acc@5 89.062 (96.067)	Mem 1051MB
+[2025-06-10 17:01:12 eval_vit_small_16_224] (eval.py 309): INFO Test: [240/391]	Time 0.114 (0.223)	Loss 0.9141 (0.7787)	Acc@1 86.719 (83.244)	Acc@5 92.188 (96.022)	Mem 1051MB
+[2025-06-10 17:01:19 eval_vit_small_16_224] (eval.py 309): INFO Test: [250/391]	Time 0.115 (0.245)	Loss 0.6205 (0.7930)	Acc@1 88.281 (82.769)	Acc@5 95.312 (95.916)	Mem 1051MB
+[2025-06-10 17:01:25 eval_vit_small_16_224] (eval.py 309): INFO Test: [260/391]	Time 0.139 (0.258)	Loss 0.7190 (0.8055)	Acc@1 78.125 (82.444)	Acc@5 99.219 (95.818)	Mem 1051MB
+[2025-06-10 17:01:33 eval_vit_small_16_224] (eval.py 309): INFO Test: [270/391]	Time 0.517 (0.278)	Loss 1.5099 (0.8124)	Acc@1 65.625 (82.285)	Acc@5 91.406 (95.719)	Mem 1051MB
+[2025-06-10 17:01:40 eval_vit_small_16_224] (eval.py 309): INFO Test: [280/391]	Time 0.352 (0.292)	Loss 0.9967 (0.8158)	Acc@1 79.688 (82.223)	Acc@5 94.531 (95.699)	Mem 1051MB
+[2025-06-10 17:01:47 eval_vit_small_16_224] (eval.py 309): INFO Test: [290/391]	Time 0.114 (0.308)	Loss 1.3978 (0.8241)	Acc@1 44.531 (82.007)	Acc@5 94.531 (95.584)	Mem 1051MB
+[2025-06-10 17:01:56 eval_vit_small_16_224] (eval.py 309): INFO Test: [300/391]	Time 3.989 (0.326)	Loss 0.7754 (0.8300)	Acc@1 83.594 (81.896)	Acc@5 96.094 (95.510)	Mem 1051MB
+[2025-06-10 17:02:00 eval_vit_small_16_224] (eval.py 309): INFO Test: [310/391]	Time 0.114 (0.329)	Loss 1.0858 (0.8340)	Acc@1 78.906 (81.828)	Acc@5 90.625 (95.446)	Mem 1051MB
+[2025-06-10 17:02:08 eval_vit_small_16_224] (eval.py 309): INFO Test: [320/391]	Time 0.114 (0.344)	Loss 0.5494 (0.8391)	Acc@1 89.844 (81.732)	Acc@5 97.656 (95.412)	Mem 1051MB
+[2025-06-10 17:02:16 eval_vit_small_16_224] (eval.py 309): INFO Test: [330/391]	Time 2.245 (0.358)	Loss 1.3535 (0.8490)	Acc@1 63.281 (81.465)	Acc@5 93.750 (95.341)	Mem 1051MB
+[2025-06-10 17:02:23 eval_vit_small_16_224] (eval.py 309): INFO Test: [340/391]	Time 0.114 (0.367)	Loss 0.7169 (0.8518)	Acc@1 82.812 (81.378)	Acc@5 98.438 (95.331)	Mem 1051MB
+[2025-06-10 17:02:30 eval_vit_small_16_224] (eval.py 309): INFO Test: [350/391]	Time 0.114 (0.376)	Loss 0.8540 (0.8544)	Acc@1 83.594 (81.317)	Acc@5 95.312 (95.312)	Mem 1051MB
+[2025-06-10 17:02:38 eval_vit_small_16_224] (eval.py 309): INFO Test: [360/391]	Time 2.170 (0.388)	Loss 1.2836 (0.8618)	Acc@1 71.094 (81.159)	Acc@5 95.312 (95.263)	Mem 1051MB
+[2025-06-10 17:02:44 eval_vit_small_16_224] (eval.py 309): INFO Test: [370/391]	Time 0.115 (0.395)	Loss 0.9090 (0.8580)	Acc@1 71.875 (81.235)	Acc@5 98.438 (95.312)	Mem 1051MB
+[2025-06-10 17:02:52 eval_vit_small_16_224] (eval.py 309): INFO Test: [380/391]	Time 0.114 (0.405)	Loss 0.6594 (0.8602)	Acc@1 86.719 (81.195)	Acc@5 99.219 (95.308)	Mem 1051MB
+[2025-06-10 17:03:00 eval_vit_small_16_224] (eval.py 309): INFO Test: [390/391]	Time 0.474 (0.414)	Loss 1.5011 (0.8581)	Acc@1 60.000 (81.218)	Acc@5 90.000 (95.334)	Mem 1051MB
+[2025-06-10 17:03:00 eval_vit_small_16_224] (eval.py 316): INFO  * Acc@1 81.218 Acc@5 95.334
+[2025-06-10 17:03:00 eval_vit_small_16_224] (eval.py 222): INFO Accuracy of best_model.pth on the 50000 test images with size (224, 224): 81.218%
+[2025-06-10 17:03:03 eval_vit_small_16_224] (eval.py 309): INFO Test: [0/391]	Time 2.311 (2.311)	Loss 0.3603 (0.3603)	Acc@1 94.531 (94.531)	Acc@5 99.219 (99.219)	Mem 2137MB
+[2025-06-10 17:03:05 eval_vit_small_16_224] (eval.py 309): INFO Test: [10/391]	Time 0.260 (0.459)	Loss 1.0563 (0.4185)	Acc@1 78.125 (91.832)	Acc@5 98.438 (98.580)	Mem 2139MB
+[2025-06-10 17:03:08 eval_vit_small_16_224] (eval.py 309): INFO Test: [20/391]	Time 0.262 (0.370)	Loss 0.5684 (0.5559)	Acc@1 87.500 (87.500)	Acc@5 96.875 (97.842)	Mem 2139MB
+[2025-06-10 17:03:11 eval_vit_small_16_224] (eval.py 309): INFO Test: [30/391]	Time 0.263 (0.336)	Loss 1.0153 (0.6609)	Acc@1 77.344 (84.627)	Acc@5 93.750 (97.303)	Mem 2139MB
+[2025-06-10 17:03:13 eval_vit_small_16_224] (eval.py 309): INFO Test: [40/391]	Time 0.264 (0.318)	Loss 0.4220 (0.5924)	Acc@1 92.188 (86.681)	Acc@5 97.656 (97.599)	Mem 2139MB
+[2025-06-10 17:03:16 eval_vit_small_16_224] (eval.py 309): INFO Test: [50/391]	Time 0.264 (0.308)	Loss 0.2183 (0.5933)	Acc@1 98.438 (87.025)	Acc@5 99.219 (97.457)	Mem 2139MB
+[2025-06-10 17:03:19 eval_vit_small_16_224] (eval.py 309): INFO Test: [60/391]	Time 0.264 (0.300)	Loss 0.7129 (0.5596)	Acc@1 85.156 (87.859)	Acc@5 95.312 (97.631)	Mem 2139MB
+[2025-06-10 17:03:21 eval_vit_small_16_224] (eval.py 309): INFO Test: [70/391]	Time 0.264 (0.295)	Loss 0.8503 (0.5912)	Acc@1 76.562 (87.093)	Acc@5 96.875 (97.502)	Mem 2139MB
+[2025-06-10 17:03:24 eval_vit_small_16_224] (eval.py 309): INFO Test: [80/391]	Time 0.264 (0.292)	Loss 0.6024 (0.6035)	Acc@1 88.281 (86.680)	Acc@5 98.438 (97.463)	Mem 2139MB
+[2025-06-10 17:03:27 eval_vit_small_16_224] (eval.py 309): INFO Test: [90/391]	Time 0.265 (0.289)	Loss 0.7883 (0.6039)	Acc@1 75.000 (86.719)	Acc@5 97.656 (97.442)	Mem 2139MB
+[2025-06-10 17:03:29 eval_vit_small_16_224] (eval.py 309): INFO Test: [100/391]	Time 0.264 (0.286)	Loss 0.5001 (0.6074)	Acc@1 90.625 (86.440)	Acc@5 96.875 (97.486)	Mem 2139MB
+[2025-06-10 17:03:32 eval_vit_small_16_224] (eval.py 309): INFO Test: [110/391]	Time 0.266 (0.284)	Loss 1.0283 (0.6174)	Acc@1 63.281 (86.001)	Acc@5 98.438 (97.508)	Mem 2139MB
+[2025-06-10 17:03:35 eval_vit_small_16_224] (eval.py 309): INFO Test: [120/391]	Time 0.265 (0.283)	Loss 0.4331 (0.6164)	Acc@1 92.969 (86.189)	Acc@5 99.219 (97.553)	Mem 2139MB
+[2025-06-10 17:03:37 eval_vit_small_16_224] (eval.py 309): INFO Test: [130/391]	Time 0.266 (0.281)	Loss 0.2718 (0.6097)	Acc@1 96.875 (86.409)	Acc@5 99.219 (97.537)	Mem 2139MB
+[2025-06-10 17:03:40 eval_vit_small_16_224] (eval.py 309): INFO Test: [140/391]	Time 0.268 (0.280)	Loss 0.9258 (0.6091)	Acc@1 77.344 (86.281)	Acc@5 100.000 (97.640)	Mem 2139MB
+[2025-06-10 17:03:43 eval_vit_small_16_224] (eval.py 309): INFO Test: [150/391]	Time 0.267 (0.280)	Loss 0.7225 (0.6168)	Acc@1 77.344 (86.186)	Acc@5 97.656 (97.563)	Mem 2139MB
+[2025-06-10 17:03:45 eval_vit_small_16_224] (eval.py 309): INFO Test: [160/391]	Time 0.267 (0.279)	Loss 0.8217 (0.6204)	Acc@1 84.375 (86.190)	Acc@5 94.531 (97.511)	Mem 2139MB
+[2025-06-10 17:03:48 eval_vit_small_16_224] (eval.py 309): INFO Test: [170/391]	Time 0.268 (0.278)	Loss 1.4742 (0.6403)	Acc@1 65.625 (85.700)	Acc@5 89.844 (97.318)	Mem 2139MB
+[2025-06-10 17:03:51 eval_vit_small_16_224] (eval.py 309): INFO Test: [180/391]	Time 0.267 (0.277)	Loss 1.5900 (0.6565)	Acc@1 64.844 (85.329)	Acc@5 89.062 (97.138)	Mem 2139MB
+[2025-06-10 17:03:53 eval_vit_small_16_224] (eval.py 309): INFO Test: [190/391]	Time 0.268 (0.277)	Loss 1.2322 (0.6786)	Acc@1 71.094 (84.751)	Acc@5 94.531 (96.932)	Mem 2139MB
+[2025-06-10 17:03:56 eval_vit_small_16_224] (eval.py 309): INFO Test: [200/391]	Time 0.268 (0.277)	Loss 0.6125 (0.6993)	Acc@1 83.594 (84.328)	Acc@5 97.656 (96.708)	Mem 2139MB
+[2025-06-10 17:03:59 eval_vit_small_16_224] (eval.py 309): INFO Test: [210/391]	Time 0.268 (0.276)	Loss 0.9680 (0.7124)	Acc@1 79.688 (83.964)	Acc@5 93.750 (96.597)	Mem 2139MB
+[2025-06-10 17:04:01 eval_vit_small_16_224] (eval.py 309): INFO Test: [220/391]	Time 0.267 (0.276)	Loss 0.4961 (0.7160)	Acc@1 89.844 (83.919)	Acc@5 98.438 (96.543)	Mem 2139MB
+[2025-06-10 17:04:04 eval_vit_small_16_224] (eval.py 309): INFO Test: [230/391]	Time 0.268 (0.275)	Loss 1.2112 (0.7232)	Acc@1 74.219 (83.834)	Acc@5 90.625 (96.452)	Mem 2139MB
+[2025-06-10 17:04:07 eval_vit_small_16_224] (eval.py 309): INFO Test: [240/391]	Time 0.270 (0.275)	Loss 0.8365 (0.7242)	Acc@1 84.375 (83.869)	Acc@5 91.406 (96.386)	Mem 2139MB
+[2025-06-10 17:04:09 eval_vit_small_16_224] (eval.py 309): INFO Test: [250/391]	Time 0.269 (0.275)	Loss 0.4769 (0.7392)	Acc@1 91.406 (83.423)	Acc@5 96.094 (96.252)	Mem 2139MB
+[2025-06-10 17:04:12 eval_vit_small_16_224] (eval.py 309): INFO Test: [260/391]	Time 0.269 (0.275)	Loss 0.7052 (0.7507)	Acc@1 75.781 (83.064)	Acc@5 97.656 (96.190)	Mem 2139MB
+[2025-06-10 17:04:15 eval_vit_small_16_224] (eval.py 309): INFO Test: [270/391]	Time 0.269 (0.274)	Loss 1.4649 (0.7586)	Acc@1 65.625 (82.896)	Acc@5 89.844 (96.094)	Mem 2139MB
+[2025-06-10 17:04:17 eval_vit_small_16_224] (eval.py 309): INFO Test: [280/391]	Time 0.269 (0.274)	Loss 1.0945 (0.7619)	Acc@1 72.656 (82.829)	Acc@5 94.531 (96.088)	Mem 2139MB
+[2025-06-10 17:04:20 eval_vit_small_16_224] (eval.py 309): INFO Test: [290/391]	Time 0.269 (0.274)	Loss 1.3325 (0.7685)	Acc@1 49.219 (82.638)	Acc@5 94.531 (96.008)	Mem 2139MB
+[2025-06-10 17:04:23 eval_vit_small_16_224] (eval.py 309): INFO Test: [300/391]	Time 0.269 (0.274)	Loss 0.6055 (0.7733)	Acc@1 87.500 (82.556)	Acc@5 97.656 (95.928)	Mem 2139MB
+[2025-06-10 17:04:25 eval_vit_small_16_224] (eval.py 309): INFO Test: [310/391]	Time 0.269 (0.274)	Loss 1.0488 (0.7767)	Acc@1 81.250 (82.483)	Acc@5 91.406 (95.898)	Mem 2139MB
+[2025-06-10 17:04:28 eval_vit_small_16_224] (eval.py 309): INFO Test: [320/391]	Time 0.268 (0.274)	Loss 0.5562 (0.7823)	Acc@1 87.500 (82.367)	Acc@5 96.875 (95.855)	Mem 2139MB
+[2025-06-10 17:04:31 eval_vit_small_16_224] (eval.py 309): INFO Test: [330/391]	Time 0.269 (0.273)	Loss 1.2273 (0.7917)	Acc@1 67.188 (82.083)	Acc@5 92.969 (95.780)	Mem 2139MB
+[2025-06-10 17:04:34 eval_vit_small_16_224] (eval.py 309): INFO Test: [340/391]	Time 0.270 (0.273)	Loss 0.6458 (0.7947)	Acc@1 89.062 (82.027)	Acc@5 97.656 (95.755)	Mem 2139MB
+[2025-06-10 17:04:36 eval_vit_small_16_224] (eval.py 309): INFO Test: [350/391]	Time 0.270 (0.273)	Loss 0.7923 (0.7969)	Acc@1 81.250 (81.973)	Acc@5 96.875 (95.729)	Mem 2139MB
+[2025-06-10 17:04:39 eval_vit_small_16_224] (eval.py 309): INFO Test: [360/391]	Time 0.269 (0.273)	Loss 1.2388 (0.8043)	Acc@1 72.656 (81.811)	Acc@5 96.094 (95.680)	Mem 2139MB
+[2025-06-10 17:04:42 eval_vit_small_16_224] (eval.py 309): INFO Test: [370/391]	Time 0.270 (0.273)	Loss 0.9024 (0.8005)	Acc@1 70.312 (81.852)	Acc@5 96.875 (95.734)	Mem 2139MB
+[2025-06-10 17:04:44 eval_vit_small_16_224] (eval.py 309): INFO Test: [380/391]	Time 0.269 (0.273)	Loss 0.6248 (0.8020)	Acc@1 85.156 (81.818)	Acc@5 99.219 (95.725)	Mem 2139MB
+[2025-06-10 17:04:47 eval_vit_small_16_224] (eval.py 309): INFO Test: [390/391]	Time 0.219 (0.273)	Loss 1.4384 (0.8002)	Acc@1 58.750 (81.824)	Acc@5 91.250 (95.754)	Mem 2139MB
+[2025-06-10 17:04:47 eval_vit_small_16_224] (eval.py 316): INFO  * Acc@1 81.824 Acc@5 95.754
+[2025-06-10 17:04:47 eval_vit_small_16_224] (eval.py 222): INFO Accuracy of best_model.pth on the 50000 test images with size (320, 320): 81.824%
+[2025-06-10 17:04:50 eval_vit_small_16_224] (eval.py 309): INFO Test: [0/391]	Time 2.219 (2.219)	Loss 0.3169 (0.3169)	Acc@1 95.312 (95.312)	Acc@5 99.219 (99.219)	Mem 3484MB
+[2025-06-10 17:04:54 eval_vit_small_16_224] (eval.py 309): INFO Test: [10/391]	Time 0.515 (0.591)	Loss 1.0167 (0.3873)	Acc@1 77.344 (92.330)	Acc@5 99.219 (98.864)	Mem 3485MB
+[2025-06-10 17:04:58 eval_vit_small_16_224] (eval.py 309): INFO Test: [20/391]	Time 0.419 (0.508)	Loss 0.5472 (0.5309)	Acc@1 86.719 (87.500)	Acc@5 96.875 (98.140)	Mem 3485MB

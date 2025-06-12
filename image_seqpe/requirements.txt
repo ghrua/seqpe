@@ -1,0 +1,16 @@
+torch
+torchvision
+timm
+opencv-python
+termcolor==1.1.0
+yacs==0.1.8
+pyyaml
+scipy
+requests
+tqdm
+munch
+einops
+packaging
+matplotlib
+safetensors
+wandb
