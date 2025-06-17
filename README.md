@@ -14,7 +14,7 @@ Please refer to [our paper](https://arxiv.org/pdf/2506.13277) for more details a
 ```
 @misc{li2025seqpetransformersequentialposition,
       title={SeqPE: Transformer with Sequential Position Encoding}, 
-      author={Huyang Li and Yahui Liu and Hongyu Sun and Deng Cai and Leyang Cui and Wei Bi and Peilin Zhao and Taro Watanabe},
+      author={Huayang Li and Yahui Liu and Hongyu Sun and Deng Cai and Leyang Cui and Wei Bi and Peilin Zhao and Taro Watanabe},
       year={2025},
       eprint={2506.13277},
       archivePrefix={arXiv},
